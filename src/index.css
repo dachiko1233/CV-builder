@@ -1,68 +1,195 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: #444;
+  line-height: 1.6;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+.container{
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
 }
 
-body {
-  margin: 0;
+
+/* 
+************************
+NavBar Style
+************************
+ */
+
+ .nav-bar{
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  height: 5.3rem;
+  margin-top: 3rem;
+  margin-bottom: 3.2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #000;
+ }
+
+.nav-link{
+  display: flex;
+  gap: 3.2rem ;
+  align-items: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.title{
+  font-size: 3.2rem;
+  letter-spacing: 0.75px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+nav a:link, nav a:visited {
+  display: inline-block;
+  letter-spacing: 0.75px;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #333;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition: all 0.3s;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.nav{
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
 }
+
+nav a:hover, nav a:active{
+  color: #888;
+
+}
+
+.btn-nav {
+  font-family: inherit;
+  border: none;
+  outline: 1px dotted rgb(37, 37, 37);
+  outline-offset: -4px;
+  cursor: pointer;
+  background: hsl(0deg 0% 75%);
+  box-shadow:
+    inset -1px -1px #292929,
+    inset 1px 1px #fff,
+    inset -2px -2px rgb(158, 158, 158),
+    inset 2px 2px #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 10px 30px;
+  font-size: 1.6rem;
+}
+
+.btn-nav:active {
+  box-shadow:
+    inset -1px -1px #fff,
+    inset 1px 1px #292929,
+    inset -2px -2px #ffffff,
+    inset 2px 2px rgb(158, 158, 158);
+}
+
+
+/* 
+************************
+Profile Style
+************************
+ */
+
+ .profile-section{
+  padding:  3.2rem 0;
+  background-color: #888;
+  border-radius: 5rem;
+ }
+
+ .pro-grid{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 2rem;
+  justify-self: center;
+
+}
+
+.pro-oval{
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 2rem;
+  display: grid; 
+  justify-self: center;
+  align-self: center;
+  overflow: hidden;
+  
+}
+
+.pro-oval img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  object-fit: cover;
+
+}
+
+.pro-title{
+  font-size: 3.2rem;
+  color: #fff;
+  letter-spacing: 0.75px;
+}
+
+.pro-text{
+  font-size: 1.6rem;
+  line-height: 1.6;
+  letter-spacing: 0.75px;
+  padding-right: 10rem;
+  color: #fff;
+}
+
+.pro-area{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  
+}
+
+.pro-input{
+  width: 85%;
+  
+  border: 3px solid #fff;
+  border-radius: 30px;
+  color: #444;
+  padding: 2rem;
+}
+
+.pro-btn {
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  background-color: #151515;
+  color: #eee;
+  border-radius: 7px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+}
+
+.pro-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* .button-span {
+  color: #aaa;
+} */
