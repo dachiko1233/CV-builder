@@ -1,17 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { useBulder } from '../context/CVProvider';
 
 function Profile() {
-  const [preview, setPreview] = useState(null);
-
-  function handleFileChange(e) {
-    const file = e.target.files[0];
-    if (!file) return;
-
-    const objectUrl = URL.createObjectURL(file);
-    setPreview(objectUrl);
-
-    return () => URL.revokeObjectURL(objectUrl);
-  }
+  const { preview, handleFileChange } = useBulder();
 
   useEffect(() => {
     return () => {
@@ -26,7 +17,7 @@ function Profile() {
           {preview ? (
             <img src={preview} alt="preview" />
           ) : (
-            <div className="pro-oval" />
+            <div className="pro-ova" />
           )}
         </div>
 

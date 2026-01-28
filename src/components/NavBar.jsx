@@ -1,18 +1,21 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import Logo from './Logo';
 
 export default function NavBar() {
   return (
-    <header className="container">
-      <div className="nav-bar">
-        <h1 className="title">CV Creator</h1>
-        <div className="nav-link">
-          <nav className="nav">
-            <a href="#">Edit CV</a>
-            <a href="#">Preview CV</a>
-          </nav>
-          <button className="btn-nav">Fill Example CV</button>
-        </div>
-      </div>
-    </header>
+    <>
+      <Logo />
+      <nav className="nav-bar">
+        <ul className="nav-link">
+          <li>
+            <NavLink to="/">Edit CV</NavLink>
+          </li>
+          <li>
+            <NavLink to="/preview">Preview CV</NavLink>
+          </li>
+        </ul>
+      </nav>
+    </>
   );
 }

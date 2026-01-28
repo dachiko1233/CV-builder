@@ -1,13 +1,18 @@
-import React from 'react';
-import NavBar from './components/NavBar';
-import Profile from './components/Profile';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import CVPreview from './components/CVPreview';
+import Editor from './components/Editor';
+import { CVProvider } from './context/CVProvider';
 
 function App() {
   return (
-    <div>
-      <NavBar />
-      <Profile />
-    </div>
+    <CVProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Editor />} />
+          <Route path="/preview" element={<CVPreview />} />
+        </Routes>
+      </BrowserRouter>
+    </CVProvider>
   );
 }
 
