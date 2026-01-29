@@ -13,9 +13,15 @@ function CVPreview() {
             <img src={preview} />
           </div>
         </div>
-        <h1>
-          {form.name} {form.lastname}
-        </h1>
+        <div className="cv-box">
+          <h2 className="cv-title">
+            {form.name} {form.lastname}
+          </h2>
+
+          <p>{form.profession}</p>
+
+          <span></span>
+        </div>
       </div>
     </section>
   );

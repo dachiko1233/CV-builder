@@ -6,9 +6,9 @@ const BulderContext = createContext();
 
 function CVProvider({ children }) {
   const [form, setForm] = useState({
-    name: '',
-    lastname: '',
-    profession: '',
+    name: 'Dachi',
+    lastname: 'Maisashvili',
+    profession: 'full-stack',
     city: '',
     linki: '',
     phone: '',
