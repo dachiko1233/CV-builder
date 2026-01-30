@@ -70,7 +70,7 @@ function Editor() {
       <General
         number={2}
         title="Education"
-        text="The education demonstrates your commitment to learning and your willingness to acquire new skills"
+        text="The education demonstrates your commitment to learning and your willingness to acquire new skills If you have multiple degrees, list them in reverse chronological order, with the most recent degree listed first and if you don't have any "
       />
     </div>
   );

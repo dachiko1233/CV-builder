@@ -1,9 +1,10 @@
 import React from 'react';
 import NavBar from './NavBar';
 import { useBulder } from '../context/CVProvider';
+import PreMain from './PreMain';
 
 function CVPreview() {
-  const { form, preview } = useBulder();
+  const { preview } = useBulder();
   return (
     <section>
       <NavBar />
@@ -13,15 +14,7 @@ function CVPreview() {
             <img src={preview} />
           </div>
         </div>
-        <div className="cv-box">
-          <h2 className="cv-title">
-            {form.name} {form.lastname}
-          </h2>
-
-          <p>{form.profession}</p>
-
-          <span></span>
-        </div>
+        <PreMain />
       </div>
     </section>
   );

@@ -1,0 +1,57 @@
+.premain{
+    padding: 4rem;
+}
+
+.title{
+    font-size: 4.2rem;
+    font-weight: bold;
+    letter-spacing: 0.75px;
+    
+}
+
+.work{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: blue;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+}
+
+.loc{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.icon{
+    font-size: 2rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.about{
+    font-size: 1.6rem;
+    letter-spacing: 0.75px;
+    margin-bottom: 2rem;
+}
+
+.box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+
+}
+
+.con{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}

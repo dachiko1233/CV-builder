@@ -371,15 +371,15 @@ label {
 ************************
  */
 
- .pre-container{
+.pre-container{
   display: grid;
   grid-template-columns: 1fr 5fr;
   gap: 3.2rem;
   margin-top: 5rem;
- }
+}
 
- .pre-bg{
+.pre-bg{
   background-color: #000;
-  height: 150vh;
+  height: 100vh;
   border-radius: 2rem;
- }
+}
