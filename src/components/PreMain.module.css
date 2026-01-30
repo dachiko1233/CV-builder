@@ -32,6 +32,11 @@
     align-items: center;
 }
 
+.ic{
+    font-size: 2rem;
+
+}
+
 .text{
     font-size: 1.8rem;
     font-weight: 500;
@@ -40,7 +45,7 @@
 .about{
     font-size: 1.6rem;
     letter-spacing: 0.75px;
-    margin-bottom: 2rem;
+    margin-bottom: 4.2rem;
 }
 
 .box{
@@ -54,4 +59,28 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
+}
+
+.span{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.span a:link, .span a:visited{
+    display: inline-block;
+    color: blue;
+    font-size: 1.6rem;
+    text-decoration: none;
+    
+}
+
+.span a:hover, .span a:active{
+    color: #000;
+    text-decoration: underline;
+}
+
+
+.num{
+    font-size: 1.6rem;
 }

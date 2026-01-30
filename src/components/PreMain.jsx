@@ -23,23 +23,23 @@ export default function PreMain() {
 
       <div className={Styles.box}>
         <div className={Styles.con}>
-          <span>
-            <i className="fa-solid fa-envelope"></i>
+          <span className={Styles.span}>
+            <i className={`fa-solid fa-envelope ${Styles.ic}`}></i>
             <a href="#">{form.email}</a>
           </span>
-          <span>
-            <i className="fa-solid fa-phone"></i>
-            <p>{form.number}</p>
+          <span className={Styles.span}>
+            <i className={`fa-solid fa-phone ${Styles.ic}`}></i>
+            <p className={Styles.num}>{form.phone}</p>
           </span>
         </div>
 
-        <div>
-          <span>
-            <i className="fa-brands fa-linkedin"></i>
+        <div className={Styles.con}>
+          <span className={Styles.span}>
+            <i className={`fa-brands fa-linkedin ${Styles.ic}`}></i>
             <a href="#">{form.linkdin}</a>
           </span>
-          <span>
-            <i className="fa-brands fa-github"></i>
+          <span className={Styles.span}>
+            <i className={`fa-brands fa-github ${Styles.ic}`}></i>
             <a href="#">{form.portfolio}</a>
           </span>
         </div>

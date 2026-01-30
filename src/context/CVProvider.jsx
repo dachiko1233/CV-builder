@@ -6,13 +6,13 @@ const BulderContext = createContext();
 
 function CVProvider({ children }) {
   const [form, setForm] = useState({
-    name: 'Dachi',
+    name: '',
     lastname: 'Maisashvili',
     profession: 'full-stack',
     portfolio: 'Dachi123',
     city: 'Limassol',
     linkdin: 'Linkdin Link',
-    phone: '+35795949343',
+    phone: '+357 95 949343',
     email: 'Dachi@Gmail.com',
     about: 'I am Full-stack developer',
   });
