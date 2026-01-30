@@ -9,11 +9,12 @@ function CVProvider({ children }) {
     name: 'Dachi',
     lastname: 'Maisashvili',
     profession: 'full-stack',
-    city: '',
-    linki: '',
-    phone: '',
-    email: '',
-    about: '',
+    portfolio: 'Dachi123',
+    city: 'Limassol',
+    linkdin: 'Linkdin Link',
+    phone: '+35795949343',
+    email: 'Dachi@Gmail.com',
+    about: 'I am Full-stack developer',
   });
 
   function handleChange(e) {

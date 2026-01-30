@@ -2,7 +2,6 @@ import Inputs from './Inputs';
 import NavBar from './NavBar';
 import Profile from './Profile';
 import General from './General';
-import Inp from './Inp';
 
 function Editor() {
   return (
@@ -17,9 +16,62 @@ function Editor() {
             introduce yourself, highlight your skills, and provide a brief
             summary of your career goals."
       />
-      <Inputs id="cv-name" type="text" name="name" pla="Type your Firts name" />
-      <Inputs id="cv-name" type="text" name="name" pla="Type your Firts name" />
-      <Inp />
+
+      <div className="inp-grid container">
+        <Inputs
+          id="cv-name"
+          type="text"
+          name="name"
+          pla="Type your Firts name"
+        />
+        <Inputs
+          id="cv-lastnam"
+          type="text"
+          name="lastname"
+          pla="Type your Last name"
+        />
+
+        <Inputs
+          id="cv-name"
+          type="text"
+          name="profession"
+          pla="Type your Firts name"
+        />
+        <Inputs id="cv-name" type="text" name="city" pla="Type your City" />
+
+        <Inputs
+          id="cv-name"
+          type="text"
+          name="linkdin"
+          pla="Type your Linkdin name"
+        />
+        <Inputs
+          id="cv-name"
+          type="text"
+          name="portfolio"
+          pla="Type your Portfolio URL"
+        />
+
+        <Inputs
+          id="cv-name"
+          type="text"
+          name="email"
+          pla="Type your @gmai.com "
+        />
+        <Inputs id="cv-name" type="text" name="phone" pla="Type your Number " />
+
+        <Inputs
+          id="cv-name"
+          type="text"
+          name="about"
+          pla="Type your Description (About me) "
+        />
+      </div>
+      <General
+        number={2}
+        title="Education"
+        text="The education demonstrates your commitment to learning and your willingness to acquire new skills"
+      />
     </div>
   );
 }
