@@ -2,8 +2,11 @@ import Inputs from './Inputs';
 import NavBar from './NavBar';
 import Profile from './Profile';
 import General from './General';
+import Button from './Button';
+import { useBuilder } from '../context/CVProvider';
 
 function Editor() {
+  const { setOpen } = useBuilder();
   return (
     <div>
       <NavBar />
@@ -37,6 +40,7 @@ function Editor() {
           name="profession"
           pla="Type your Firts name"
         />
+
         <Inputs id="cv-city" type="text" name="city" pla="Type your City" />
 
         <Inputs
@@ -73,9 +77,47 @@ function Editor() {
         text="The education demonstrates your commitment to learning and your willingness to acquire new skills If you have multiple degrees, list them in reverse chronological order, with the most recent degree listed first and if you don't have any "
       />
 
-      <div className="inp-grid container">
-        <Inputs id="ed-School" text="text" />
-      </div>
+      {!open ? (
+        <>
+          <div className=" btn-style container ">
+            <Button
+              icon={<i class="fa-solid fa-plus"></i>}
+              button="Add more education"
+            />
+          </div>
+          <div className="edc-grid container">
+            <Inputs
+              id="ed-School"
+              text="text"
+              name="school"
+              pla="Type your shchool name"
+            />
+
+            <Inputs
+              id="ed-degre"
+              text="text"
+              name="degree"
+              pla="Degree, certification or title"
+            />
+
+            <Inputs
+              id="ed-star"
+              text="text"
+              name="strdate"
+              pla="Starting date"
+            />
+
+            <Inputs
+              id="ed-enddate"
+              text="text"
+              name="enddate"
+              pla="Ending date"
+            />
+          </div>{' '}
+        </>
+      ) : (
+        <p>Hello</p>
+      )}
     </div>
   );
 }

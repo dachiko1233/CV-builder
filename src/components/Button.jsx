@@ -1,7 +1,11 @@
 import React from 'react';
 
-function Button({ button }) {
-  return <button className="btn-nav">{button}</button>;
+function Button({ button, icon }) {
+  return (
+    <button className="btn-nav">
+      {icon} {button}
+    </button>
+  );
 }
 
 export default Button;

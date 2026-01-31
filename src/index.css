@@ -345,9 +345,17 @@ label {
   margin-bottom: 9.6rem;
 }
 
-.inp-grid > :nth-child(3),.inp-grid > :nth-child(4),.inp-grid > :last-child{
+.inp-grid > :nth-child(3),.inp-grid > :nth-child(4),.inp-grid > :nth-child(9){
   grid-column: 1 / -1;
 
+}
+
+.edc-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4rem;
+  row-gap: 3rem;
+  margin-bottom: 9.6rem;
 }
 
 .inp-name{
@@ -387,4 +395,10 @@ label {
   background-color: #000;
   height: 100vh;
   border-radius: 2rem;
+}
+
+.btn-style{
+  display: flex;
+  justify-content: end;
+  margin-bottom: 3rem;
 }

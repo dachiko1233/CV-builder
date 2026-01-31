@@ -18,10 +18,15 @@ function CVProvider({ children }) {
     phone: '+357 95 949343',
     email: 'Dachi@Gmail.com',
     about: 'I am Full-stack developer',
+    school: 'Stn',
+    degree: 'uny',
+    strdate: '18',
+    enddate: '29',
   });
 
   //useState for profile img
   const [preview, setPreview] = useState(null);
+  const [open, setOpen] = useState(false);
 
   // HandleChange for general Inforamtion
   function handleChange(e) {
@@ -50,7 +55,15 @@ function CVProvider({ children }) {
 
   return (
     <BulderContext.Provider
-      value={{ handleChange, form, preview, handleFileChange, pic }}
+      value={{
+        handleChange,
+        form,
+        preview,
+        handleFileChange,
+        pic,
+        open,
+        setOpen,
+      }}
     >
       {children}
     </BulderContext.Provider>
