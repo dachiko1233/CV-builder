@@ -4,13 +4,16 @@ import { useState, useEffect } from 'react';
 
 const BulderContext = createContext();
 
+const pic =
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf1fiSQO7JfDw0uv1Ae_Ye-Bo9nhGNg27dwg&s';
+
 function CVProvider({ children }) {
   const [form, setForm] = useState({
-    name: '',
+    name: 'Johnny',
     lastname: 'Maisashvili',
     profession: 'full-stack',
     portfolio: 'Dachi123',
-    city: 'Limassol',
+    city: 'Cyprus, Limassol',
     linkdin: 'Linkdin Link',
     phone: '+357 95 949343',
     email: 'Dachi@Gmail.com',
@@ -44,7 +47,7 @@ function CVProvider({ children }) {
   }, [preview]);
   return (
     <BulderContext.Provider
-      value={{ handleChange, form, preview, handleFileChange }}
+      value={{ handleChange, form, preview, handleFileChange, pic }}
     >
       {children}
     </BulderContext.Provider>

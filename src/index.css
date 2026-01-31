@@ -1,3 +1,6 @@
+@import "tailwindcss";
+
+
 *{
   margin: 0;
   padding: 0;
@@ -74,6 +77,7 @@ NavBar Style
 .nav-list li a:link, .nav-list li a:visited{
   color: #444;
   text-decoration: none;
+  letter-spacing: 0.50px;
 }
 
 .nav-list li a:hover, .nav-list li a:active{
@@ -85,6 +89,7 @@ NavBar Style
 .title{
   font-size: 3.2rem;
   letter-spacing: 0.75px;
+  font-weight: 600;
 }
 
 .btn-nav {

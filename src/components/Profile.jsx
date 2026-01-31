@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useBulder } from '../context/CVProvider';
 
 function Profile() {
-  const { preview, handleFileChange } = useBulder();
+  const { preview, handleFileChange, pic } = useBulder();
 
   useEffect(() => {
     return () => {
@@ -14,11 +14,7 @@ function Profile() {
     <section className="profile-section container">
       <div className="pro-grid">
         <div className="pro-oval">
-          {preview ? (
-            <img src={preview} alt="preview" />
-          ) : (
-            <div className="pro-ova" />
-          )}
+          {preview ? <img src={preview} alt="preview" /> : <img src={pic} />}
         </div>
 
         <div className="pro-area">
