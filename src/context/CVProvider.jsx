@@ -9,7 +9,7 @@ const pic =
 function CVProvider({ children }) {
   //useState for General information
   const [form, setForm] = useState({
-    name: 'Johnny',
+    name: 'xvale delete bnt unda gakeTo education  ',
     lastname: 'Maisashvili',
     profession: 'full-stack',
     portfolio: 'Dachi123',
@@ -37,6 +37,10 @@ function CVProvider({ children }) {
     }));
   }
 
+  function handleShowInputs() {
+    setOpen((prev) => !prev);
+  }
+
   function handleFileChange(e) {
     const file = e.target.files[0];
     if (!file) return;
@@ -46,6 +50,8 @@ function CVProvider({ children }) {
 
     return () => URL.revokeObjectURL(objectUrl);
   }
+
+  function handleDelete(id) {}
 
   useEffect(() => {
     return () => {
@@ -62,7 +68,7 @@ function CVProvider({ children }) {
         handleFileChange,
         pic,
         open,
-        setOpen,
+        handleShowInputs,
       }}
     >
       {children}

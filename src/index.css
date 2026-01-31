@@ -93,6 +93,7 @@ NavBar Style
 }
 
 .btn-nav {
+  display: inline-block;
   font-family: inherit;
   border: none;
   outline: 1px dotted rgb(37, 37, 37);
@@ -223,7 +224,7 @@ input Style
 
 .section-inp{
   padding: 0 9.6rem;
-  margin-bottom: 9.6rem;
+  margin-bottom: 3.2rem;
 }
 
 /* From Uiverse.io by Alaner-xs */ 
@@ -286,7 +287,7 @@ input Style
  display: grid;
  grid-template-columns: 1fr 1fr;
  gap: 9.6rem;
- margin-bottom: 10rem;
+ /* margin-bottom: 10rem; */
 }
 
 .inp-number{
@@ -355,7 +356,7 @@ label {
   grid-template-columns: 1fr 1fr;
   column-gap: 4rem;
   row-gap: 3rem;
-  margin-bottom: 9.6rem;
+  margin-bottom: 3.2rem
 }
 
 .inp-name{

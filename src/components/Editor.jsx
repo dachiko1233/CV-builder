@@ -6,7 +6,7 @@ import Button from './Button';
 import { useBuilder } from '../context/CVProvider';
 
 function Editor() {
-  const { setOpen } = useBuilder();
+  const { open, handleShowInputs } = useBuilder();
   return (
     <div>
       <NavBar />
@@ -19,7 +19,6 @@ function Editor() {
             introduce yourself, highlight your skills, and provide a brief
             summary of your career goals."
       />
-
       <div className="inp-grid container">
         <Inputs
           id="cv-name"
@@ -76,47 +75,58 @@ function Editor() {
         title="Education"
         text="The education demonstrates your commitment to learning and your willingness to acquire new skills If you have multiple degrees, list them in reverse chronological order, with the most recent degree listed first and if you don't have any "
       />
+      <div className=" btn-style container ">
+        <Button
+          onClick={handleShowInputs}
+          close={open ? '➖ Close education' : '➕ Add education'}
+        />
+      </div>
 
-      {!open ? (
-        <>
-          <div className=" btn-style container ">
-            <Button
-              icon={<i class="fa-solid fa-plus"></i>}
-              button="Add more education"
-            />
-          </div>
-          <div className="edc-grid container">
-            <Inputs
-              id="ed-School"
-              text="text"
-              name="school"
-              pla="Type your shchool name"
-            />
+      <div className="edc-grid container">
+        <Inputs
+          id="ed-School"
+          text="text"
+          name="school"
+          pla="Type your shchool name"
+        />
 
-            <Inputs
-              id="ed-degre"
-              text="text"
-              name="degree"
-              pla="Degree, certification or title"
-            />
+        <Inputs
+          id="ed-degre"
+          text="text"
+          name="degree"
+          pla="Degree, certification or title"
+        />
 
-            <Inputs
-              id="ed-star"
-              text="text"
-              name="strdate"
-              pla="Starting date"
-            />
+        <Inputs id="ed-star" text="text" name="strdate" pla="Starting date" />
 
-            <Inputs
-              id="ed-enddate"
-              text="text"
-              name="enddate"
-              pla="Ending date"
-            />
-          </div>{' '}
-        </>
-      ) : (
-        <p>Hello</p>
+        <Inputs id="ed-enddate" text="text" name="enddate" pla="Ending date" />
+      </div>
+
+      {open && (
+        <div className="edc-grid container">
+          <Inputs
+            id="ed-School"
+            text="text"
+            name="school"
+            pla="Type your shchool name"
+          />
+
+          <Inputs
+            id="ed-degre"
+            text="text"
+            name="degree"
+            pla="Degree, certification or title"
+          />
+
+          <Inputs id="ed-star" text="text" name="strdate" pla="Starting date" />
+
+          <Inputs
+            id="ed-enddate"
+            text="text"
+            name="enddate"
+            pla="Ending date"
+          />
+        </div>
       )}
     </div>
   );

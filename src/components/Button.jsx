@@ -1,9 +1,10 @@
 import React from 'react';
 
-function Button({ button, icon }) {
+function Button({ button, onClick, close }) {
   return (
-    <button className="btn-nav">
-      {icon} {button}
+    <button onClick={onClick} className="btn-nav">
+      {button}
+      {close}
     </button>
   );
 }
