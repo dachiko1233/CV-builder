@@ -1,10 +1,11 @@
 import React from 'react';
 import NavBar from './NavBar';
-import { useBulder } from '../context/CVProvider';
+
 import PreMain from './PreMain';
+import { useBuilder } from '../context/CVProvider';
 
 function CVPreview() {
-  const { preview, pic } = useBulder();
+  const { preview, pic } = useBuilder();
   return (
     <section>
       <NavBar />

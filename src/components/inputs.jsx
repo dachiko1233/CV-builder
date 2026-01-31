@@ -1,7 +1,8 @@
-import { useBulder } from '../context/CVProvider';
+import { useBuilder } from '../context/CVProvider';
 
 function Inputs({ id, type, name, pla }) {
-  const { form, handleChange } = useBulder();
+  const { form, handleChange } = useBuilder();
+
   return (
     <>
       <form className="inp-form">

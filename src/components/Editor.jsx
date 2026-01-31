@@ -37,31 +37,31 @@ function Editor() {
           name="profession"
           pla="Type your Firts name"
         />
-        <Inputs id="cv-name" type="text" name="city" pla="Type your City" />
+        <Inputs id="cv-city" type="text" name="city" pla="Type your City" />
 
         <Inputs
-          id="cv-name"
+          id="cv-linkdin"
           type="text"
           name="linkdin"
           pla="Type your Linkdin name"
         />
         <Inputs
-          id="cv-name"
+          id="cv-portolio"
           type="text"
           name="portfolio"
           pla="Type your Portfolio URL"
         />
 
         <Inputs
-          id="cv-name"
-          type="text"
+          id="cv-email"
+          type="email"
           name="email"
           pla="Type your @gmai.com "
         />
-        <Inputs id="cv-name" type="text" name="phone" pla="Type your Number " />
+        <Inputs id="cv-phone" type="tel" name="phone" pla="Type your Number " />
 
         <Inputs
-          id="cv-name"
+          id="cv-about"
           type="text"
           name="about"
           pla="Type your Description (About me) "
@@ -72,6 +72,10 @@ function Editor() {
         title="Education"
         text="The education demonstrates your commitment to learning and your willingness to acquire new skills If you have multiple degrees, list them in reverse chronological order, with the most recent degree listed first and if you don't have any "
       />
+
+      <div className="inp-grid container">
+        <Inputs id="ed-School" text="text" />
+      </div>
     </div>
   );
 }

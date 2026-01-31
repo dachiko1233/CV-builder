@@ -1,8 +1,8 @@
+import { useBuilder } from '../context/CVProvider';
 import Styles from './PreMain.module.css';
-import { useBulder } from '../context/CVProvider';
 
 export default function PreMain() {
-  const { form } = useBulder();
+  const { form } = useBuilder();
 
   console.log(form.number);
   return (

@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import { useBulder } from '../context/CVProvider';
+import { useBuilder } from '../context/CVProvider';
 
 function Profile() {
-  const { preview, handleFileChange, pic } = useBulder();
+  const { preview, handleFileChange, pic } = useBuilder();
 
   useEffect(() => {
     return () => {
