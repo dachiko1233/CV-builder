@@ -3,6 +3,7 @@ import NavBar from './NavBar';
 
 import PreMain from './PreMain';
 import { useBuilder } from '../context/CVProvider';
+import Education from './Education';
 
 function CVPreview() {
   const { preview, pic } = useBuilder();

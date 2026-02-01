@@ -1,8 +1,10 @@
 import { useBuilder } from '../context/CVProvider';
+import Education from './Education';
+
 import Styles from './PreMain.module.css';
 
 export default function PreMain() {
-  const { form } = useBuilder();
+  const { form, open } = useBuilder();
 
   return (
     <div className={Styles.premain}>
@@ -42,6 +44,11 @@ export default function PreMain() {
             <a href="#">{form.portfolio}</a>
           </span>
         </div>
+      </div>
+
+      <div className={Styles.grid}>
+        <Education title="Education" />
+        {open && <Education title="Education" />}
       </div>
     </div>
   );

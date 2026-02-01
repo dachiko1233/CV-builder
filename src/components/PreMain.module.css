@@ -1,5 +1,6 @@
 .premain{
     padding: 4rem;
+   max-width: 500px;
 }
 
 .title{
@@ -83,4 +84,9 @@
 
 .num{
     font-size: 1.6rem;
+}
+
+.grid{
+   display: flex;
+   gap: 2rem;
 }

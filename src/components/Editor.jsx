@@ -7,7 +7,7 @@ import { useBuilder } from '../context/CVProvider';
 import DeleteBtn from './DeleteBtn';
 
 function Editor() {
-  const { open, handleShowInputs } = useBuilder();
+  const { open, handleShowInputs, handleAddEducation } = useBuilder();
   return (
     <div>
       <NavBar />
@@ -111,35 +111,31 @@ function Editor() {
         <>
           <div className="edc-grid container">
             <Inputs
-              id="ed-School"
+              id="eduschool"
               text="text"
-              name="school"
+              name="eduscholl"
               pla="Type your shchool name"
             />
 
             <Inputs
-              id="ed-degre"
+              id="edudegree"
               text="text"
-              name="degree"
+              name="edudegree"
               pla="Degree, certification or title"
             />
 
             <Inputs
-              id="ed-star"
+              id="edustart"
               text="text"
-              name="strdate"
+              name="eduStart"
               pla="Starting date"
             />
 
-            <Inputs
-              id="ed-enddate"
-              text="text"
-              name="enddate"
-              pla="Ending date"
-            />
+            <Inputs id="eduend" text="text" name="eduend" pla="Ending date" />
           </div>
 
           <div className="btn-style container">
+            <Button onClick={handleAddEducation} button="save education" />
             <DeleteBtn clear="Clear all" />
           </div>
         </>

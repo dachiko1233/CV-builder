@@ -9,7 +9,7 @@ const pic =
 function CVProvider({ children }) {
   //useState for General information
   const [form, setForm] = useState({
-    name: 'xvale delete bnt unda gakeTo education  ',
+    name: 'Dachi',
     lastname: 'Maisashvili',
     profession: 'full-stack',
     portfolio: 'Dachi123',
@@ -18,10 +18,17 @@ function CVProvider({ children }) {
     phone: '+357 95 949343',
     email: 'Dachi@Gmail.com',
     about: 'I am Full-stack developer',
-    school: 'Stn',
+    school: 'SaShvalo skola',
     degree: 'uny',
     strdate: '18',
     enddate: '29',
+  });
+
+  const [education, setEducation] = useState({
+    eduschool: '',
+    edudegree: '',
+    edustart: '',
+    eduend: '',
   });
 
   //useState for profile img
@@ -32,6 +39,14 @@ function CVProvider({ children }) {
   function handleChange(e) {
     const { name, value } = e.target;
     setForm((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  }
+
+  function handleAddEducation(e) {
+    const { name, value } = e.target;
+    setEducation((prev) => ({
       ...prev,
       [name]: value,
     }));
@@ -78,6 +93,9 @@ function CVProvider({ children }) {
         open,
         handleShowInputs,
         handleDelete,
+        education,
+        setEducation,
+        handleAddEducation,
       }}
     >
       {children}
