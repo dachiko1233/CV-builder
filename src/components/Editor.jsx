@@ -4,6 +4,7 @@ import Profile from './Profile';
 import General from './General';
 import Button from './Button';
 import { useBuilder } from '../context/CVProvider';
+import DeleteBtn from './DeleteBtn';
 
 function Editor() {
   const { open, handleShowInputs } = useBuilder();
@@ -75,7 +76,7 @@ function Editor() {
         title="Education"
         text="The education demonstrates your commitment to learning and your willingness to acquire new skills If you have multiple degrees, list them in reverse chronological order, with the most recent degree listed first and if you don't have any "
       />
-      <div className=" btn-style container ">
+      <div className="btn-style container">
         <Button
           onClick={handleShowInputs}
           close={open ? '➖ Close education' : '➕ Add education'}
@@ -102,31 +103,46 @@ function Editor() {
         <Inputs id="ed-enddate" text="text" name="enddate" pla="Ending date" />
       </div>
 
+      <div className="btn-style container">
+        <DeleteBtn clear="Clear all" />
+      </div>
+
       {open && (
-        <div className="edc-grid container">
-          <Inputs
-            id="ed-School"
-            text="text"
-            name="school"
-            pla="Type your shchool name"
-          />
+        <>
+          <div className="edc-grid container">
+            <Inputs
+              id="ed-School"
+              text="text"
+              name="school"
+              pla="Type your shchool name"
+            />
 
-          <Inputs
-            id="ed-degre"
-            text="text"
-            name="degree"
-            pla="Degree, certification or title"
-          />
+            <Inputs
+              id="ed-degre"
+              text="text"
+              name="degree"
+              pla="Degree, certification or title"
+            />
 
-          <Inputs id="ed-star" text="text" name="strdate" pla="Starting date" />
+            <Inputs
+              id="ed-star"
+              text="text"
+              name="strdate"
+              pla="Starting date"
+            />
 
-          <Inputs
-            id="ed-enddate"
-            text="text"
-            name="enddate"
-            pla="Ending date"
-          />
-        </div>
+            <Inputs
+              id="ed-enddate"
+              text="text"
+              name="enddate"
+              pla="Ending date"
+            />
+          </div>
+
+          <div className="btn-style container">
+            <DeleteBtn clear="Clear all" />
+          </div>
+        </>
       )}
     </div>
   );

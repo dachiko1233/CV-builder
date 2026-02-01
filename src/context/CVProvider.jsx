@@ -51,7 +51,15 @@ function CVProvider({ children }) {
     return () => URL.revokeObjectURL(objectUrl);
   }
 
-  function handleDelete(id) {}
+  function handleDelete() {
+    setForm((prev) => ({
+      ...prev,
+      school: '',
+      degree: '',
+      strdate: '',
+      enddate: '',
+    }));
+  }
 
   useEffect(() => {
     return () => {
@@ -69,6 +77,7 @@ function CVProvider({ children }) {
         pic,
         open,
         handleShowInputs,
+        handleDelete,
       }}
     >
       {children}

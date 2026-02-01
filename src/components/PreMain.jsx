@@ -4,7 +4,6 @@ import Styles from './PreMain.module.css';
 export default function PreMain() {
   const { form } = useBuilder();
 
-  console.log(form.number);
   return (
     <div className={Styles.premain}>
       <h2 className={Styles.title}>
