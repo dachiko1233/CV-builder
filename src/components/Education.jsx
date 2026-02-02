@@ -3,19 +3,35 @@ import { useBuilder } from '../context/CVProvider';
 import Styles from './Education.module.css';
 
 function Education({ title }) {
-  const { education } = useBuilder();
+  const { form, education, open } = useBuilder();
   return (
-    <div className={Styles.edu}>
-      <h2>{title}</h2>
+    <>
+      <div className={Styles.edu}>
+        <h2>{title}</h2>
 
-      <p className={Styles.school}>{education.eduschool}</p>
+        <p className={Styles.school}>{form.school}</p>
 
-      <p>{education.edudegree}</p>
+        <p>{form.degree}</p>
 
-      <span>
-        {education.edustrdate} - {education.eduenddate}
-      </span>
-    </div>
+        <span>
+          {form.strdate} - {form.enddate}
+        </span>
+      </div>
+
+      {open && (
+        <div className={Styles.edu}>
+          <h2>{title}</h2>
+
+          <p className={Styles.school}>{education.eduschool}</p>
+
+          <p>{education.edudegree}</p>
+
+          <span>
+            {education.edustrdate} - {education.eduenddate}
+          </span>
+        </div>
+      )}
+    </>
   );
 }
 

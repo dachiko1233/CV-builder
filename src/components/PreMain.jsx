@@ -48,7 +48,7 @@ export default function PreMain() {
 
       <div className={Styles.grid}>
         <Education title="Education" />
-        {open && <Education title="Education" />}
+        {/* {open && <Education title="Education" />} */}
       </div>
     </div>
   );

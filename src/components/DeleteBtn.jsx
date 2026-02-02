@@ -1,11 +1,10 @@
 import React from 'react';
-import { useBuilder } from '../context/CVProvider';
 
-function DeleteBtn({ clear }) {
+function DeleteBtn({ clear, onClick }) {
   console.log(clear);
-  const { handleDelete } = useBuilder();
+
   return (
-    <button className="del-btn" onClick={handleDelete}>
+    <button className="del-btn" onClick={onClick}>
       ❌ {clear}
     </button>
   );

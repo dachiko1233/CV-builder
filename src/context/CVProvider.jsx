@@ -23,7 +23,7 @@ function CVProvider({ children }) {
     strdate: '18',
     enddate: '29',
   });
-
+  //education state
   const [education, setEducation] = useState({
     eduschool: '',
     edudegree: '',

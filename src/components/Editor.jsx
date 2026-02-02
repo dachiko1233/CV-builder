@@ -7,7 +7,8 @@ import { useBuilder } from '../context/CVProvider';
 import DeleteBtn from './DeleteBtn';
 
 function Editor() {
-  const { open, handleShowInputs, handleAddEducation } = useBuilder();
+  const { open, handleShowInputs, handleAddEducation, handleDelete } =
+    useBuilder();
   return (
     <div>
       <NavBar />
@@ -104,7 +105,7 @@ function Editor() {
       </div>
 
       <div className="btn-style container">
-        <DeleteBtn clear="Clear all" />
+        <DeleteBtn clear="Clear all" onClick={handleDelete} />
       </div>
 
       {open && (
@@ -136,7 +137,7 @@ function Editor() {
 
           <div className="btn-style container">
             <Button onClick={handleAddEducation} button="save education" />
-            <DeleteBtn clear="Clear all" />
+            <DeleteBtn clear="Clear all" onClick={handleDelete} />
           </div>
         </>
       )}
