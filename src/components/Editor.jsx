@@ -12,13 +12,17 @@ function Editor() {
     handleShowInputs,
     handleAddEducation,
     handleDelete,
+    handleChange,
     deleteEducation,
+    form,
+    education,
   } = useBuilder();
 
   return (
     <div>
       <NavBar />
       <Profile />
+      {/* General Information section */}
       <General
         title="General information"
         number={1}
@@ -33,12 +37,16 @@ function Editor() {
           type="text"
           name="name"
           pla="Type your Firts name"
+          value={form[name]}
+          onChange={handleChange}
         />
         <Inputs
           id="cv-lastnam"
           type="text"
           name="lastname"
           pla="Type your Last name"
+          value={form[name]}
+          onChange={handleChange}
         />
 
         <Inputs
@@ -46,38 +54,64 @@ function Editor() {
           type="text"
           name="profession"
           pla="Type your Firts name"
+          value={form[name]}
+          onChange={handleChange}
         />
 
-        <Inputs id="cv-city" type="text" name="city" pla="Type your City" />
+        <Inputs
+          id="cv-city"
+          type="text"
+          name="city"
+          pla="Type your City"
+          value={form[name]}
+          onChange={handleChange}
+        />
 
         <Inputs
           id="cv-linkdin"
           type="text"
           name="linkdin"
           pla="Type your Linkdin name"
+          value={form[name]}
+          onChange={handleChange}
         />
         <Inputs
           id="cv-portolio"
           type="text"
           name="portfolio"
           pla="Type your Portfolio URL"
+          value={form[name]}
+          onChange={handleChange}
         />
 
         <Inputs
           id="cv-email"
           type="email"
           name="email"
-          pla="Type your @gmai.com "
+          pla="Type your @gmai.com"
+          value={form[name]}
+          onChange={handleChange}
         />
-        <Inputs id="cv-phone" type="tel" name="phone" pla="Type your Number " />
+        <Inputs
+          id="cv-phone"
+          type="tel"
+          name="phone"
+          pla="Type your Number "
+          value={form[name]}
+          onChange={handleChange}
+        />
 
         <Inputs
           id="cv-about"
           type="text"
           name="about"
-          pla="Type your Description (About me) "
+          pla="Type your Description (About me)"
+          value={form[name]}
+          onChange={handleChange}
         />
       </div>
+
+      {/* Education sectio */}
       <General
         number={2}
         title="Education"
@@ -96,6 +130,8 @@ function Editor() {
           text="text"
           name="school"
           pla="Type your shchool name"
+          value={form[name]}
+          onChange={handleChange}
         />
 
         <Inputs
@@ -103,11 +139,27 @@ function Editor() {
           text="text"
           name="degree"
           pla="Degree, certification or title"
+          value={form[name]}
+          onChange={handleChange}
         />
 
-        <Inputs id="ed-star" text="text" name="strdate" pla="Starting date" />
+        <Inputs
+          id="ed-star"
+          text="text"
+          name="strdate"
+          pla="Starting date"
+          value={form[name]}
+          onChange={handleChange}
+        />
 
-        <Inputs id="ed-enddate" text="text" name="enddate" pla="Ending date" />
+        <Inputs
+          id="ed-enddate"
+          text="text"
+          name="enddate"
+          pla="Ending date"
+          value={form[name]}
+          onChange={handleChange}
+        />
       </div>
 
       <div className="btn-style container">
@@ -122,6 +174,8 @@ function Editor() {
               text="text"
               name="eduschool"
               pla="Type your shchool name"
+              value={education[name]}
+              onChange={handleChange}
             />
 
             <Inputs
@@ -129,6 +183,8 @@ function Editor() {
               text="text"
               name="edudegre"
               pla="Degree, certification or title"
+              value={education[name]}
+              onChange={handleChange}
             />
 
             <Inputs
@@ -136,9 +192,18 @@ function Editor() {
               text="text"
               name="edustart"
               pla="Starting date"
+              value={education[name]}
+              onChange={handleChange}
             />
 
-            <Inputs id="eduend" text="text" name="eduend" pla="Ending date" />
+            <Inputs
+              id="eduend"
+              text="text"
+              name="eduend"
+              pla="Ending date"
+              value={education[name]}
+              onChange={handleChange}
+            />
           </div>
 
           <div className="btn-style container">
@@ -147,7 +212,7 @@ function Editor() {
           </div>
         </>
       )}
-
+      {/* workExperience Section */}
       <General
         number={3}
         title="Work Experience"

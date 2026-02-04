@@ -1,7 +1,7 @@
-import { useBuilder } from '../context/CVProvider';
+//import { useBuilder } from '../context/CVProvider';
 
-function Inputs({ id, type, name, pla }) {
-  const { form, education, handleChange } = useBuilder();
+function Inputs({ id, type, name, pla, onChange, value }) {
+  //const { form, education, work } = useBuilder();
 
   return (
     <>
@@ -15,8 +15,9 @@ function Inputs({ id, type, name, pla }) {
               name={name}
               className="input"
               placeholder={pla}
-              value={education[name] || form[name] || ''}
-              onChange={handleChange}
+              //value={education[name] || form[name] || work[name] || ''}
+              value={value}
+              onChange={onChange}
             />
           </div>
         </div>

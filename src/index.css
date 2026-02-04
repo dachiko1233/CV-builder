@@ -1,4 +1,4 @@
-@import "tailwindcss";
+
 
 
 *{
@@ -141,7 +141,6 @@ Profile Style
   grid-template-columns: 1fr 4fr;
   gap: 2rem;
   justify-self: center;
-
 }
 
 
@@ -223,7 +222,6 @@ input Style
 ************************
  */
 
-
 .section-inp{
   padding: 0 9.6rem;
   margin-bottom: 3.2rem;
@@ -278,11 +276,13 @@ input Style
   box-shadow: 5.5px 7px 0 black;
 }
 
+.input{
+  cursor: pointer;
+}
 
 .inp-info{
   display: flex;
   align-items: center;
-  
   gap: 3.2rem
 }
 
@@ -370,8 +370,6 @@ label {
 
 }
 
-
-
 .edit-gird{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -441,4 +439,8 @@ label {
 .del-btn:active {
   box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
   transform: translate(0.1em, 0.1em);
+}
+
+.del-btn:hover{
+  cursor: pointer;
 }

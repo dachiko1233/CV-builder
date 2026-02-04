@@ -18,6 +18,7 @@ function CVProvider({ children }) {
     phone: '+357 95 949343',
     email: 'Dachi@Gmail.com',
     about: 'I am Full-stack developer',
+    // eudcation state
     school: 'SaShvalo skola',
     degree: 'uny',
     strdate: '18',
@@ -60,7 +61,7 @@ function CVProvider({ children }) {
 
   //onChange setWork
 
-  function handleChangeWork() {
+  function handleChangeWork(e) {
     const { name, value } = e.target;
     setWork((prev) => ({
       ...prev,
