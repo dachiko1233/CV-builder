@@ -24,6 +24,16 @@ function CVProvider({ children }) {
     enddate: '29',
   });
 
+  //work useState
+  const [work, setWork] = useState({
+    position: '',
+    company: '',
+    location: '',
+    fromdate: '',
+    todate: '',
+    tasks: '',
+  });
+
   //education state
   const [education, setEducation] = useState({
     eduschool: 'sashvalo skola',
@@ -45,6 +55,16 @@ function CVProvider({ children }) {
     setOpen((prev) => ({
       ...prev,
       [section]: !prev[section],
+    }));
+  }
+
+  //onChange setWork
+
+  function handleChangeWork() {
+    const { name, value } = e.target;
+    setWork((prev) => ({
+      ...prev,
+      [name]: value,
     }));
   }
 
@@ -118,6 +138,8 @@ function CVProvider({ children }) {
         setEducation,
         handleAddEducation,
         deleteEducation,
+        work,
+        handleChangeWork,
       }}
     >
       {children}
