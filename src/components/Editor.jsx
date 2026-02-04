@@ -7,8 +7,14 @@ import { useBuilder } from '../context/CVProvider';
 import DeleteBtn from './DeleteBtn';
 
 function Editor() {
-  const { open, handleShowInputs, handleAddEducation, handleDelete } =
-    useBuilder();
+  const {
+    open,
+    handleShowInputs,
+    handleAddEducation,
+    handleDelete,
+    deleteEducation,
+  } = useBuilder();
+
   return (
     <div>
       <NavBar />
@@ -79,8 +85,8 @@ function Editor() {
       />
       <div className="btn-style container">
         <Button
-          onClick={handleShowInputs}
-          close={open ? '➖ Close education' : '➕ Add education'}
+          onClick={() => handleShowInputs('eudcation')}
+          close={open.eudcation ? '➖ Close education' : '➕ Add education'}
         />
       </div>
 
@@ -108,27 +114,27 @@ function Editor() {
         <DeleteBtn clear="Clear all" onClick={handleDelete} />
       </div>
 
-      {open && (
+      {open.eudcation && (
         <>
           <div className="edc-grid container">
             <Inputs
               id="eduschool"
               text="text"
-              name="eduscholl"
+              name="eduschool"
               pla="Type your shchool name"
             />
 
             <Inputs
-              id="edudegree"
+              id="edudegre"
               text="text"
-              name="edudegree"
+              name="edudegre"
               pla="Degree, certification or title"
             />
 
             <Inputs
               id="edustart"
               text="text"
-              name="eduStart"
+              name="edustart"
               pla="Starting date"
             />
 
@@ -137,10 +143,27 @@ function Editor() {
 
           <div className="btn-style container">
             <Button onClick={handleAddEducation} button="save education" />
-            <DeleteBtn clear="Clear all" onClick={handleDelete} />
+            <DeleteBtn clear="Clear all" onClick={deleteEducation} />
           </div>
         </>
       )}
+
+      <General
+        number={3}
+        title="Work Experience"
+        text="In addition to the basics, you should also include a brief description of your duties and accomplishments while in the role. This can help potential employers understand the scope of your responsibilities and the impact of it."
+      />
+
+      <div className="btn-style container">
+        <Button
+          onClick={handleShowInputs}
+          close={open ? '➖ Close Work Experience' : '➕ Add Work Experience'}
+        />
+      </div>
+
+      <div className="edc-grid container">
+        <Inputs id="" text="text" name="" pla="Type your shchool name" />
+      </div>
     </div>
   );
 }

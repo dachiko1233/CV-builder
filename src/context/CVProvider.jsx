@@ -23,17 +23,30 @@ function CVProvider({ children }) {
     strdate: '18',
     enddate: '29',
   });
+
   //education state
   const [education, setEducation] = useState({
-    eduschool: '',
-    edudegree: '',
-    edustart: '',
-    eduend: '',
+    eduschool: 'sashvalo skola',
+    edudegre: 'rato',
+    edustart: '12',
+    eduend: '43',
   });
 
   //useState for profile img
   const [preview, setPreview] = useState(null);
-  const [open, setOpen] = useState(false);
+
+  //open inuts state
+  const [open, setOpen] = useState({
+    eudcation: 'false',
+    workeexp: 'false',
+  });
+  //open inputs function
+  function handleShowInputs(section) {
+    setOpen((prev) => ({
+      ...prev,
+      [section]: !prev[section],
+    }));
+  }
 
   // HandleChange for general Inforamtion
   function handleChange(e) {
@@ -52,20 +65,28 @@ function CVProvider({ children }) {
     }));
   }
 
-  function handleShowInputs() {
-    setOpen((prev) => !prev);
-  }
-
   function handleFileChange(e) {
     const file = e.target.files[0];
     if (!file) return;
 
     const objectUrl = URL.createObjectURL(file);
     setPreview(objectUrl);
-
-    return () => URL.revokeObjectURL(objectUrl);
   }
 
+  //delete btn
+  function deleteEducation() {
+    // setEducation((prev) => prev.filter((_, i) => i !== index));
+
+    setEducation((prev) => ({
+      ...prev,
+      eduschool: '',
+      edudegre: '',
+      eduend: '',
+      edustart: '',
+    }));
+  }
+
+  //delete btn genetal info
   function handleDelete() {
     setForm((prev) => ({
       ...prev,
@@ -96,6 +117,7 @@ function CVProvider({ children }) {
         education,
         setEducation,
         handleAddEducation,
+        deleteEducation,
       }}
     >
       {children}

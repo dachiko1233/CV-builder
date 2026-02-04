@@ -4,7 +4,7 @@ import Education from './Education';
 import Styles from './PreMain.module.css';
 
 export default function PreMain() {
-  const { form, open } = useBuilder();
+  const { form } = useBuilder();
 
   return (
     <div className={Styles.premain}>
@@ -47,7 +47,7 @@ export default function PreMain() {
       </div>
 
       <div className={Styles.grid}>
-        <Education title="Education" />
+        <Education title="Education" more="more infomation" />
         {/* {open && <Education title="Education" />} */}
       </div>
     </div>

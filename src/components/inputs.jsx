@@ -1,7 +1,7 @@
 import { useBuilder } from '../context/CVProvider';
 
 function Inputs({ id, type, name, pla }) {
-  const { form, handleChange } = useBuilder();
+  const { form, education, handleChange } = useBuilder();
 
   return (
     <>
@@ -15,7 +15,7 @@ function Inputs({ id, type, name, pla }) {
               name={name}
               className="input"
               placeholder={pla}
-              value={form[name] || ''}
+              value={education[name] || form[name] || ''}
               onChange={handleChange}
             />
           </div>
