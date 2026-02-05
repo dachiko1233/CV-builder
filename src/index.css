@@ -362,6 +362,10 @@ label {
   margin-bottom: 3.2rem;
 }
 
+.edc-grid> :nth-child(6), .edc-grid> :nth-child(5){
+  grid-column: 1 / -1;
+}
+
 .inp-name{
   display: flex;
   flex-direction: column;

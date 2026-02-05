@@ -10,7 +10,7 @@ function Editor() {
   const {
     open,
     handleShowInputs,
-    handleAddEducation,
+
     handleDelete,
     handleChange,
     deleteEducation,
@@ -127,7 +127,7 @@ function Editor() {
       <div className="edc-grid container">
         <Inputs
           id="ed-School"
-          text="text"
+          type="text"
           name="school"
           pla="Type your shchool name"
           value={form[name]}
@@ -136,7 +136,7 @@ function Editor() {
 
         <Inputs
           id="ed-degre"
-          text="text"
+          type="text"
           name="degree"
           pla="Degree, certification or title"
           value={form[name]}
@@ -145,7 +145,7 @@ function Editor() {
 
         <Inputs
           id="ed-star"
-          text="text"
+          type="text"
           name="strdate"
           pla="Starting date"
           value={form[name]}
@@ -154,7 +154,7 @@ function Editor() {
 
         <Inputs
           id="ed-enddate"
-          text="text"
+          type="text"
           name="enddate"
           pla="Ending date"
           value={form[name]}
@@ -171,7 +171,7 @@ function Editor() {
           <div className="edc-grid container">
             <Inputs
               id="eduschool"
-              text="text"
+              type="text"
               name="eduschool"
               pla="Type your shchool name"
               value={education[name]}
@@ -180,7 +180,7 @@ function Editor() {
 
             <Inputs
               id="edudegre"
-              text="text"
+              type="text"
               name="edudegre"
               pla="Degree, certification or title"
               value={education[name]}
@@ -189,7 +189,7 @@ function Editor() {
 
             <Inputs
               id="edustart"
-              text="text"
+              type="text"
               name="edustart"
               pla="Starting date"
               value={education[name]}
@@ -198,7 +198,7 @@ function Editor() {
 
             <Inputs
               id="eduend"
-              text="text"
+              type="text"
               name="eduend"
               pla="Ending date"
               value={education[name]}
@@ -207,7 +207,7 @@ function Editor() {
           </div>
 
           <div className="btn-style container">
-            <Button onClick={handleAddEducation} button="save education" />
+            {/* <Button onClick={handleAddEducation} button="save education" /> */}
             <DeleteBtn clear="Clear all" onClick={deleteEducation} />
           </div>
         </>
@@ -221,14 +221,101 @@ function Editor() {
 
       <div className="btn-style container">
         <Button
-          onClick={handleShowInputs}
-          close={open ? '➖ Close Work Experience' : '➕ Add Work Experience'}
+          onClick={() => handleShowInputs('workeexp')}
+          close={
+            open.workeexp
+              ? '➖ Close Work Experience'
+              : '➕ Add Work Experience'
+          }
         />
       </div>
 
       <div className="edc-grid container">
-        <Inputs id="" text="text" name="" pla="Type your shchool name" />
+        <Inputs
+          id="exp-psoition"
+          type="text"
+          name="position"
+          pla="Type your Position"
+        />
+
+        <Inputs
+          id="exp-company"
+          type="text"
+          name="company"
+          pla="Type your Company"
+        />
+
+        <Inputs
+          id="exp-loc"
+          type="text"
+          name="location"
+          pla="Type your location"
+        />
+
+        <Inputs
+          id="exp-fromdate"
+          type="text"
+          name="fromdate"
+          pla="Type your from"
+        />
+
+        <Inputs
+          id="exp-end"
+          type="text"
+          name="todate"
+          pla="Type your to date"
+        />
+
+        <Inputs id="exp-tasks" type="text" name="tasks" pla="Type your tasks" />
       </div>
+
+      {open.workeexp && (
+        <>
+          <div className="edc-grid container">
+            <Inputs
+              id="exp-psoition"
+              type="text"
+              name="position"
+              pla="Type your Position"
+            />
+
+            <Inputs
+              id="exp-company"
+              type="text"
+              name="company"
+              pla="Type your Company"
+            />
+
+            <Inputs
+              id="exp-loc"
+              type="text"
+              name="location"
+              pla="Type your location"
+            />
+
+            <Inputs
+              id="exp-fromdate"
+              type="text"
+              name="fromdate"
+              pla="Type your from"
+            />
+
+            <Inputs
+              id="exp-end"
+              type="text"
+              name="todate"
+              pla="Type your to date"
+            />
+
+            <Inputs
+              id="exp-tasks"
+              type="text"
+              name="tasks"
+              pla="Type your tasks"
+            />
+          </div>
+        </>
+      )}
     </div>
   );
 }
